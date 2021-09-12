@@ -1,0 +1,9 @@
+<h1>Url#new</h1>
+<p>Find me in app/views/url/new.html.erb</p>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>" style= "color: red;"><%= value %></div>
+<% end %>
+<%= form_for @url, :method => "post" do |f| %>
+  <%= f.text_field :actual_url, label: "Enter Url", input_html: { class: "form-control" }, placeholder: "Url here", required: true %>
+  <%= f.submit %>
+<% end %>
